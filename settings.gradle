@@ -1,0 +1,16 @@
+
+def version = 'v0.0.28'
+
+apply from: "https://raw.githubusercontent.com/voxeet/voxeet-sdk-android-gradle/${version}/dolbyio.gradle"
+
+
+dependencyResolutionManagement {
+    versionCatalogs {
+        dolbyio {
+            from(files(gradle.dolbyio.files.catalog))
+        }
+    }
+}
+
+rootProject.name = "Audio Moderation Sample"
+include ':app'

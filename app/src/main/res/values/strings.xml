@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Audio Moderation Sample</string>
+    <string name="welcome">Dolby.io conference with Hive Audio Moderation</string>
+    <string name="hint_conference_name">Conference name</string>
+    <string name="hint_username">Username</string>
+    <string name="join_button">Join</string>
+    <string name="leave_button">Leave</string>
+    <string name="moderation_button">Request Audio Moderation</string>
+    <string name="play_button">Play a buffered audio</string>
+    <string name="moderation_result">Moderation Result</string>
+    <string name="moderation_result_code">Code</string>
+    <string name="moderation_result_message">Message</string>
+    <string name="moderation_result_language">Language</string>
+    <string name="moderation_no_result">No Result</string>
+    <string name="transcribed_text">Transcribed Text</string>
+    <string name="transcribed_text_no_text">No Text</string>
+    <string name="transcribed_result">Transcribed Result</string>
+    <string name="unknown_class">Unknown Class</string>
+    <string name="unknown_code">Unknown Code</string>
+    <string name="common_missing_permissions">%s permissions denied. Please make sure it is granted.</string>
+    <string name="common_error">An error occurred. Please check logs.</string>s
+</resources>

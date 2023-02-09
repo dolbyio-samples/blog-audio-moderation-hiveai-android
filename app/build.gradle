@@ -1,0 +1,93 @@
+plugins {
+    id "com.android.application"
+    id "kotlin-android"
+    id "kotlin-kapt"
+    id "dagger.hilt.android.plugin"
+    alias(dolbyio.plugins.ksp)
+}
+
+android {
+    namespace 'io.dolby.android.audiomoderationsample'
+
+    defaultConfig {
+        applicationId "io.dolby.comms.android.audiomoderationsample"
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables {
+            useSupportLibrary true
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    buildFeatures {
+        compose true
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion dolbyio.versions.androidx.compose.compiler.get()
+    }
+    packagingOptions {
+        resources {
+            excludes += '/META-INF/{AL2.0,LGPL2.1}'
+        }
+    }
+}
+
+dependencies {
+
+    /* AndroidX */
+    implementation dolbyio.androidx.appcompat
+    implementation dolbyio.androidx.material
+    implementation dolbyio.androidx.core.ktx
+    implementation dolbyio.androidx.core.splashscreen
+    implementation dolbyio.androidx.lifecycle.runtime.ktx
+    implementation dolbyio.androidx.activity.compose
+    implementation dolbyio.androidx.compose.ui
+    implementation dolbyio.androidx.compose.ui.toolingPreview
+    implementation dolbyio.androidx.compose.material
+    implementation dolbyio.androidx.lifecycle.common
+    implementation dolbyio.androidx.lifecycle.runtime.compose
+    implementation dolbyio.androidx.lifecycle.runtime.ktx
+    implementation dolbyio.androidx.hilt.navigation.compose
+    testImplementation dolbyio.junit
+    androidTestImplementation dolbyio.androidx.test.ext.junit
+    androidTestImplementation dolbyio.androidx.espresso.core
+    //androidTestImplementation "androidx.compose.ui:ui-test-junit4:$compose_ui_version"
+    debugImplementation dolbyio.androidx.compose.ui.tooling
+   // debugImplementation "androidx.compose.ui:ui-test-manifest:$compose_ui_version"
+
+    // Dolby.io Communications SDK
+    implementation ("com.voxeet.sdk:sdk:3.8.0-beta.1")
+
+    /* Networking */
+    implementation dolbyio.moshi
+    implementation dolbyio.moshi.adapters
+    implementation dolbyio.moshi.kotlin
+    implementation dolbyio.moshix.sealed.reflect
+
+    implementation dolbyio.okhttp
+    implementation dolbyio.okhttp.loggingInterceptor
+
+    implementation dolbyio.retrofit
+    implementation dolbyio.retrofit.converter.moshi
+    implementation dolbyio.retrofit.converter.scalars
+
+    /* Accompanist */
+    implementation dolbyio.accompanist.insets
+    implementation dolbyio.accompanist.navigation.animation
+    implementation dolbyio.accompanist.navigation.material
+    implementation dolbyio.accompanist.systemuicontroller
+    implementation dolbyio.accompanist.flowlayout
+
+    /* DI */
+    implementation dolbyio.hilt.android
+    androidTestImplementation dolbyio.hilt.android.testing
+    kapt dolbyio.hilt.compiler
+    kaptAndroidTest dolbyio.hilt.compiler
+}
