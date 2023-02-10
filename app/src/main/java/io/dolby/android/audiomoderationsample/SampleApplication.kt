@@ -1,6 +1,6 @@
 package io.dolby.android.audiomoderationsample
 
-import ApplicationScope
+import io.dolby.android.audiomoderationsample.coroutines.ApplicationScope
 import android.app.Application
 import com.voxeet.audio.utils.Log
 import dagger.hilt.android.HiltAndroidApp

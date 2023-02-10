@@ -1,6 +1,6 @@
 package io.dolby.android.audiomoderationsample.sdk
 
-import ApplicationScope
+import io.dolby.android.audiomoderationsample.coroutines.ApplicationScope
 import com.voxeet.VoxeetSDK
 import com.voxeet.sdk.authent.token.TokenCallback
 import kotlinx.coroutines.CoroutineScope
