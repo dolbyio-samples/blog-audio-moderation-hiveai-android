@@ -20,7 +20,7 @@ jobs:
       - name: build samples and apps
         uses: github/codeql-action/init@v2
         with:
-          languages: java
+          languages: cpp
       - run: |
           chmod +x gradlew
           ./gradlew -q clean bundleDebug
