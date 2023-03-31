@@ -27,15 +27,15 @@ class ObserveLocalAudioSamplesUseCase @Inject constructor() {
     private var audioFormat: Int = 0
     private var channelCount: Short = 0
 
-    private val _localAudiosamples = MutableSharedFlow<LocalInputAudioSamples>(replay = 1)
-    val localAudioSamples = _localAudiosamples.asSharedFlow()
+    private val _localAudioSamples = MutableSharedFlow<LocalInputAudioSamples>(replay = 1)
+    private val localAudioSamples = _localAudioSamples.asSharedFlow()
 
     private lateinit var job: Job
 
     init {
         VoxeetSDK.audio().local.registerLocalInputAudioCallback {
             GlobalScope.launch {
-                _localAudiosamples.emit(it)
+                _localAudioSamples.emit(it)
             }
         }
     }

@@ -254,8 +254,7 @@ class ConferenceViewModel @Inject constructor(
             ConferenceStatus.LEFT -> {
                 stopObserveLocalAudioSamples()
             }
-            else -> {
-            }
+            else -> {}
         }
     }
 

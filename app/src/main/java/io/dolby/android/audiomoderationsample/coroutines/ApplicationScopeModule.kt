@@ -1,6 +1,5 @@
 package io.dolby.android.audiomoderationsample.coroutines
 
-import io.dolby.android.audiomoderationsample.coroutines.ApplicationScope
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
