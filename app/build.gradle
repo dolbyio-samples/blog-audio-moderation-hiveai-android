@@ -63,7 +63,7 @@ dependencies {
    // debugImplementation "androidx.compose.ui:ui-test-manifest:$compose_ui_version"
 
     // Dolby.io Communications SDK
-    implementation ("com.voxeet.sdk:sdk:3.8.0-beta.1")
+    implementation ("io.dolby:sdk:3.8.2")
 
     /* Networking */
     implementation dolbyio.moshi

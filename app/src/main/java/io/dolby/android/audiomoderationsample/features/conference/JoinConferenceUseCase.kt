@@ -47,9 +47,9 @@ class JoinConferenceUseCase @Inject constructor(){
         }).then(ThenVoid { conference ->
             logger.i("Joined conference alias: " + conference.alias.toString())
             onSuccess(conference)
-        }).error { error_in: Throwable? ->
-            logger.e("Could not create conference" +  (error_in?.localizedMessage ?: "Null"));
-            onError
+        }).error { error: Throwable ->
+            logger.e("Could not create conference" +  (error.localizedMessage ?: "Null"));
+            onError(error)
         }
     }
 }
