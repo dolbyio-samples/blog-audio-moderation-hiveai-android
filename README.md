@@ -1,6 +1,6 @@
 # Blog post - Audio Moderation in conference using Hive.ai and the Dolby.io Web SDK
 
-This repository contains a sample application for the blog post TODO ADD LINK. It allows you to use [Hive Audio Moderation](https://hivemoderation.com/audio-moderation) to capture raw local audio from Dolby.io conference, transcribe raw audio into human readable text, process the full transcription and detects inappropriate content across multiple classes.
+This repository contains a sample application for the blog post [Add Conference Audio Moderation Using Hive.ai and the Dolby.io Android SDK](https://dolby.io/blog/add-conference-audio-moderation-using-hive-ai-and-the-dolby-io-android-sdk/). It explains how to use [Hive Audio Moderation](https://hivemoderation.com/audio-moderation) to capture raw local audio from Dolby.io conference, transcribe raw audio into human readable text, process the full transcription and detects inappropriate content across multiple classes.
 
 ## Requirements
 If you do not have one already, create an account on Dolby.io and retrieve a client access token by connecting to your dashboard and selecting your application then click on API keys in the left menu.
