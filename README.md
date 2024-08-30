@@ -1,4 +1,4 @@
-![Blog Picture](https://dolby.io/wp-content/uploads/2023/04/Dolby.io_Stream-The-World-A-Guide-To-Start-Streaming-Your-Game-1088x450-Purple-BG.png)
+# :warning: This repository is no longer maintained :warning:
 
 # Audio Moderation In Conference Using Hive.ai And The Dolby.io Web SDK
 This repository illustrates how to integrate Hive AI and the Dolby.io Android SDK to implement conference monitoring during conferences.
